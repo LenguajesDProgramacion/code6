@@ -7,6 +7,8 @@ public class Estudiante extends Persona {
     private int ci;
     private int edad;
 
+
+
     private List<Materia> materias;
 
    public Estudiante(String nombre, String apellido, int ci, int edad){
@@ -28,4 +30,14 @@ public class Estudiante extends Persona {
        }
        return detalle;
    }
+   public int getNotaMin(){
+       int notaMinima = 100;
+       for (Materia materia: this.materias){
+           if (materia.getNota() <= notaMinima){
+               notaMinima = materia.getNota();
+           }
+       }
+       return notaMinima;
+   }
+
 }

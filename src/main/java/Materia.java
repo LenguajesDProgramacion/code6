@@ -1,9 +1,9 @@
 public class Materia {
     private String nombre;
     private String key;
-    private String nota;
+    private int nota;
 
-    public Materia(String nombre, String key, String nota) {
+    public Materia(String nombre, String key, int nota) {
         this.nombre = nombre;
         this.key = key;
         this.nota = nota;
@@ -25,11 +25,11 @@ public class Materia {
         this.key = key;
     }
 
-    public String getNota() {
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(String nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
 }
